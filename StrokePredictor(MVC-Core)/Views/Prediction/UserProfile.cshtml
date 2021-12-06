@@ -1,0 +1,56 @@
+﻿@model StrokePredictor_MVC_Core_.Models.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h1>Profile</h1>
+<div class="d-flex flex-row mb-5 d-sm-flex" >
+    <img alt="user" src="~/images/single-neutral-shield.png" class="user-image"/>
+    <div class="padding-extra">
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+        </dl>
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,152 @@
+﻿@model StrokePredictor_MVC_Core_.Models.StrokeData
+@{
+    ViewData["Title"] = "CreateNewPrediction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create Prediction</h1>
+<p>
+    Please fill these fields to create a prediction
+    @ViewData["Age"]
+</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal form">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-row form-group">
+            <div class="col">
+                @Html.LabelFor(model => model.Gender)
+                <div>
+                    @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col">
+                @Html.LabelFor(model => model.Age)
+                <div>
+                    @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <h6>For your BMI (body mass index) please input your: </h6>
+        <div class="form-row form-group">
+            <div class="col">
+                @Html.LabelFor(model => model.Weight)
+                <div>
+                    @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col">
+                @Html.LabelFor(model => model.Height)
+                <div>
+                    @Html.EditorFor(model => model.Height, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Height, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PrevStroke)
+            <div>
+                @Html.RadioButtonFor(model => model.PrevStroke, "Yes") Yes <br />
+                @Html.RadioButtonFor(model => model.PrevStroke, "No") No <br />
+                
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HeartDisease)
+            <div>
+                @Html.RadioButtonFor(model => model.HeartDisease, "Yes") Yes <br />
+                @Html.RadioButtonFor(model => model.HeartDisease, "No") No <br />
+                @Html.ValidationMessageFor(model => model.HeartDisease, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.High_BP_Hypertension)
+            <div>
+                @Html.RadioButtonFor(model => model.High_BP_Hypertension, "Yes") Yes <br />
+                @Html.RadioButtonFor(model => model.High_BP_Hypertension, "No") No <br />
+                @Html.ValidationMessageFor(model => model.High_BP_Hypertension, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Smoking)
+            <div class="custom-radio">
+                @Html.RadioButtonFor(model => model.Smoking, "Currently Smokes") Currently Smokes <br />
+                @Html.RadioButtonFor(model => model.Smoking, "Formely Smoked") Used to Smoke <br />
+                @Html.RadioButtonFor(model => model.Smoking, "Never Smoked") Never Smoked <br />
+                @Html.ValidationMessageFor(model => model.Smoking, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.ActivityLevel)
+                <div>
+                    @Html.RadioButtonFor(model => model.ActivityLevel, "Very Active") Very Active (Rigorous exercise 4 or more days a week) <br />
+                    @Html.RadioButtonFor(model => model.ActivityLevel, "Moderately Active") Used to Smoke (Rigourous exercise 2-3 days a week)<br />
+                    @Html.RadioButtonFor(model => model.ActivityLevel, "Seldomly Active") Never Smoked (Rigorous exercise 0-1 days a week)<br />
+                    @Html.ValidationMessageFor(model => model.ActivityLevel, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ever_Married)
+            <div class="custom-radio">
+                @Html.RadioButtonFor(model => model.Ever_Married, "Yes") Yes <br />
+                @Html.RadioButtonFor(model => model.Ever_Married, "No") No <br />
+                @Html.ValidationMessageFor(model => model.Smoking, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Work_Type)
+            <div>
+                @Html.RadioButtonFor(model => model.Work_Type, "Private Employer") Private Employer <br />
+                @Html.RadioButtonFor(model => model.Work_Type, "Self-Employed") Self-Employed <br />
+                @Html.ValidationMessageFor(model => model.ResidenceType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Glucose_Level)
+            <div>
+                @Html.EditorFor(model => model.Glucose_Level, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ResidenceType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ResidenceType)
+            <div>
+                @Html.RadioButtonFor(model => model.ResidenceType, "Urban Environment") Urban Environment <br />
+                @Html.RadioButtonFor(model => model.ResidenceType, "Rural Environment") Rural Environment <br />
+                @Html.ValidationMessageFor(model => model.ResidenceType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <p>
+            Please ensure that all the data you have entered is correct to produce the most accurate results
+        </p>
+
+        <div class="btn-container">
+            <input type="submit" value="Done" class="btn btn-Styled" />
+        </div>
+
+    </div>
+}
+
+
+

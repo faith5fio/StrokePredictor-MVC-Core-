@@ -1,0 +1,102 @@
+﻿@model StrokePredictor_MVC_Core_.Models.FullResultModel
+@{
+    ViewData["Title"] = "Results";
+}
+
+
+<h1>Your Results</h1>
+<h3>Your Data</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StrokeInfo.Age)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.Age)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StrokeInfo.Gender)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.Gender)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StrokeInfo.HeartDisease)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.HeartDisease)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StrokeInfo.High_BP_Hypertension)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.High_BP_Hypertension)
+        </dd>
+
+        <dt class="col-sm-3">
+            Smoking Status: 
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.Smoking)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StrokeInfo.Ever_Married)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.Ever_Married)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StrokeInfo.Glucose_Level)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StrokeInfo.Glucose_Level) mg/dL
+        </dd>
+    </dl>
+</div>
+
+<div class="border-info rounded bg-light container-md">
+    <h3>Prediction Results</h3>
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ResultInfo.StrokeResult)
+        </dt>
+
+        <dd class="col-sm-9">
+
+            @if (Model.ResultInfo.StrokeResult == 0)
+            {
+                <p>You are not at risk for stroke</p>
+            }
+            else
+            {
+                <p>You are not risk for stroke</p>
+            }
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ResultInfo.BMI)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ResultInfo.BMI)
+        </dd>
+    </dl>
+    <div class="text-center">
+        @Html.DisplayFor(model => model.ResultInfo.Date) 
+    </div>
+</div>
+<p>
+    <button class="btn btn-Styled">Save</button>
+</p>

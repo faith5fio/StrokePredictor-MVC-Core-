@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrokePredictor(MVC-Core)", "StrokePredictor(MVC-Core)\StrokePredictor(MVC-Core).csproj", "{CF5D928F-F96C-4336-A6ED-4A57F335CC23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF5D928F-F96C-4336-A6ED-4A57F335CC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5D928F-F96C-4336-A6ED-4A57F335CC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5D928F-F96C-4336-A6ED-4A57F335CC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5D928F-F96C-4336-A6ED-4A57F335CC23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76612DC1-44B3-49CE-8CE9-6A9EF0EDEFF5}
+	EndGlobalSection
+EndGlobal

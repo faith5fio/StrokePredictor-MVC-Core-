@@ -1,0 +1,123 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+.hero {
+    height: 100vh;
+    background: url(/images/hero-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 25px;
+
+}
+.hero-info{
+    width: 70%;
+    padding: 60px;
+}
+.title{
+    line-height: 5px;
+}
+.heroTxt{
+    font-size: 5rem;
+    font-weight: bold;
+    font-style:italic;
+}
+.subtext{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.heroButtonGroup{
+    display:flex;
+    justify-content:right;
+    grid-column-gap:7px
+}
+.btn-hero {
+    background-color: orange;
+    border-radius: 30px;
+    width: 120px;
+}
+
+.btn-hero:hover{
+    box-shadow: rgb(100, 100, 100, 0.5) 0px 0px 15px 4px;
+    font-weight: bold;
+    
+    padding: 5px;
+}
+.btn-main {
+    width: 200px;
+}
+.btn-regular {
+    background-color:aliceblue;
+    opacity: 0.8;
+    border-radius: 30px;
+    width: 120px;
+}
+.btn-actionLinks{
+    text-decoration: none;
+    color: black;
+}
+.hero img {
+    width: 550px;
+    float:right;
+    position: absolute;
+    right: 0;
+    top: 35%;
+}
+
+
+/****************************  Admin styles  *****************************/
+section {
+    height: 100vh;
+    margin: auto;
+}
+
+.admin-card {
+    padding: 30px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin: 10px 20px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.admin-card h1 {
+    text-align: center;
+    font-weight: bold
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/***************  Form Styles  **********************/
+.form-row-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    gap: 5px;
+}
+.col-flex {
+    flex: 1 0 0%;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+
+
+
+
+
+

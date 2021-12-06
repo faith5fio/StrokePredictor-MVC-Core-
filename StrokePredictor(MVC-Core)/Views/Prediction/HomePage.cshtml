@@ -1,0 +1,31 @@
+﻿@model IEnumerable<StrokePredictor_MVC_Core_.Models.ResultModel>
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="text-center center-div">
+    <div class="container-md rounded background text-center">
+        <h1>
+            Welcome back @ViewData["Name"]!
+        </h1>
+
+        <p>
+            @ViewData["usrID"]
+            Stroke predictor helps you predict your probability of stroke.
+            Find out your chances now by creating a new prediction now.
+        </p>
+    </div>
+</div>
+<h1>Your previous predictions</h1>
+@if (Model.Count() > 0)
+{
+    
+        @Html.Partial("_History");
+    
+}
+else
+{
+    <p>
+        You have no previous predictions!
+    </p>
+}
+

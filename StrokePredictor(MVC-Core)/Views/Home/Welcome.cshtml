@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/generalStyle.css" rel="stylesheet" />
+    <link href="~/css/MobileStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="hero">
+        <div class="heroButtonGroup">
+            @Html.ActionLink("Sign Up", "CreateNewAccount", "Account", null, new { @class = "btn btn-regular" })
+            @Html.ActionLink("Login", "Login", "Account", null, new { @class = "btn btn-regular" })
+        </div>
+        <div class="hero-info">
+            <div class="title">
+                <h1 class="heroTxt">STROKE </h1>
+                <h1 class="heroTxt">PREDICTOR</h1>
+            </div>
+            <p class="lead subtext">Predict the possibility of a stroke based on your risk factors</p>
+            @Html.ActionLink("New Prediction", "Login", "Account", null, new { @class = "btn btn-hero btn-main btn-lgr" })
+        </div>
+        <img src="/images/stroke-img.png" alt="stroke image" />
+    </div>
+</body>
+</html>

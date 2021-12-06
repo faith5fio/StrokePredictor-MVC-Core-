@@ -1,0 +1,24 @@
+﻿body {
+}
+
+@media (max-width: 480px){
+    .admin-card {
+        padding: 25px;
+        /*background: #D9D9D9;
+        border-radius: 10px;*/
+        margin: 10px 20px;
+        width: 75%;
+        margin-left: auto;
+        /*margin-right: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);*/
+    }
+    .col-flex {
+        flex-basis:unset;
+        flex-grow: 1;
+        max-width: 100%;
+        display:block;
+    }
+}

@@ -1,0 +1,52 @@
+﻿/******************** Any Prediction Related Styles  **************************/
+
+.form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-Styled {
+    background-color: orange;
+    border-radius: 30px;
+    width: 200px;
+}
+    .btn-Styled:hover {
+        box-shadow: rgb(100, 100, 100, 0.5) 0px 0px 15px 4px;
+        font-weight: bold;
+        padding: 5px;
+    }
+.container-md {
+    width: 75%;
+    padding: 5%;
+    margin: 10px;
+}
+
+.table-Header-Row{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.table-row-container{
+    background-color: lightgray;
+    padding:5px;
+    border-radius: 20px;
+    margin-top:4px;
+
+}
+
+.padding-extra{
+    padding: 25px;
+}
+.user-image{
+    width: 120px;
+    height:120px;
+}
+
+.background{
+    background-color: rgb(0, 148, 255, 0.4);
+}
+
+.center-div{
+    margin:auto;
+}

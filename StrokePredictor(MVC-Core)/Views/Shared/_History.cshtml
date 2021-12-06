@@ -1,0 +1,30 @@
+﻿
+
+@model IEnumerable<StrokePredictor_MVC_Core_.Models.ResultModel>
+
+<table class="table table-borderless">
+    <tr class="table-Header-Row">
+        <th>Results</th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var result in Model)
+    {
+        <tr class="rounded">
+            <td>
+                @if (result.StrokeResult == 0)
+                {
+                    <p>You are not at risk for stroke</p>
+                }
+                else
+                {
+                    <p>You are not risk for stroke</p>
+                }
+            </td>
+            <td> @result.Date</td>
+            <td> <i class="fas fa-history"></i> @Html.ActionLink("Open", "OpenPrediction", "Prediction", new { predID = result.PredictionID })</td>
+            <td> <i class="fas fa-trash-alt"></i> @Html.ActionLink("Delete", "DeletePrediction", "Prediction", new { predID = result.PredictionID })</td>
+        </tr>
+    }
+</table>
